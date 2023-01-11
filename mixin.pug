@@ -1,0 +1,33 @@
+-
+	var menu_items = [
+		{
+			link: 'index',
+			title: 'CSS'
+		},
+		{
+			link: '2',
+			title: 'Синтаксис CSS'
+		},
+		{
+			link: '3',
+			title: 'Вставка CSS'
+		},
+		{
+			link: '4',
+			title: 'CSS текст'
+		},
+		{
+			link: '5',
+			title: 'CSS шрифт'
+		},
+		{
+			link: '6',
+			title: 'Блоки'
+		}
+		]
+
+mixin menu(title)
+	div.center
+				each item in menu_items
+					- var isSelected = (item.title == title)
+					div(class = (isSelected ? 'selected menu' : 'menu' )): a(href = item.link+".html")=item.title

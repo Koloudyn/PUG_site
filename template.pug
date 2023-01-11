@@ -1,0 +1,12 @@
+include mixin
+block items
+    - var title = ''
+html(lang="ru")
+    head
+        title #{title}
+        link(rel="stylesheet", href="css/main.css")
+    body
+        div.main
+            block header
+                +menu(title)
+            block content
